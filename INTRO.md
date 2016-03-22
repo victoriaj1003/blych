@@ -1,0 +1,1 @@
+This coding exercise is an opportunity for you to show us how you breakdown designs and product requirements into actual code, and coding style, experience, and creativity. It will also introduce you to the Bitly API and expose you to some of the functionality that the front-end team works with on a daily basis. 

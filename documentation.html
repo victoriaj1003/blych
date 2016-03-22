@@ -1,0 +1,1673 @@
+<!DOCTYPE html><html><head>
+  <meta charset="utf-8">
+  <title>  | Documentation</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+/*
+
+    Basscss v7.0.3
+    Low-level CSS toolkit
+    http://basscss.com
+
+    14.88 kB
+    3.38 kB Gzipped
+    286 Rules
+    328 Selectors
+    441 Declarations
+    95 Properties
+
+*/
+
+
+
+body { margin: 0 }
+img { max-width: 100% }
+svg { max-height: 100% }
+
+input,
+select,
+textarea,
+fieldset {
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+label {
+  vertical-align: middle;
+}
+
+input[type=text],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=time],
+input[type=url],
+input[type=week] {
+  height: 2.25rem;
+  padding: .5rem .5rem;
+  vertical-align: middle;
+  -webkit-appearance: none;
+}
+
+select {
+  line-height: 1.75;
+  padding: .5rem .5rem;
+}
+
+select:not([multiple]) {
+  height: 2.25rem;
+  vertical-align: middle;
+}
+
+textarea {
+  line-height: 1.75;
+  padding: .5rem .5rem;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+th,
+td {
+  padding: .25rem 1rem;
+  line-height: inherit;
+}
+
+th { vertical-align: bottom }
+td { vertical-align: top }
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  line-height: 1.5;
+  font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+pre, code, samp {
+  font-family: 'Source Code Pro', Consolas, monospace;
+  font-size: inherit;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow-x: scroll;
+}
+
+h1 { font-size: 2rem }
+h2 { font-size: 1.5rem }
+h3 { font-size: 1.25rem }
+h4 { font-size: 1rem }
+h5 { font-size: .875rem }
+h6 { font-size: .75rem }
+
+body {
+  color: #111;
+  background-color: #fff;
+}
+
+a {
+  color: #0074d9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+pre, code {
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+hr {
+  border: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(0,0,0,.125);
+}
+
+.field {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0,0,0,.125);
+  border-radius: 3px;
+}
+
+.field:focus,
+.field.is-focused {
+  outline: none;
+  border-color: #0074d9;
+  box-shadow: 0 0 0 2px rgba(0, 116, 217, 0.5);
+}
+
+.field:disabled,
+.field.is-disabled {
+  background-color: rgba(0,0,0,.125);
+  opacity: .5;
+}
+
+.field:read-only:not(select),
+.field.is-read-only {
+  background-color: rgba(0,0,0,.125);
+}
+
+
+.field.is-success {
+  border-color: #2ecc40;
+}
+
+.field.is-success:focus,
+.field.is-success.is-focused {
+  box-shadow: 0 0 0 2px rgba(46, 204, 64, 0.5);
+}
+
+.field.is-warning {
+  border-color: #ffdc00;
+}
+
+.field.is-warning:focus,
+.field.is-warning.is-focused {
+  box-shadow: 0 0 0 2px rgba(255, 220, 0, 0.5);
+}
+
+.field:invalid,
+.field.is-error {
+  border-color: #ff4136;
+}
+
+.field:invalid:focus,
+.field:invalid.is-focused,
+.field.is-error:focus,
+.field.is-error.is-focused {
+  box-shadow: 0 0 0 2px rgba(255, 65, 54, 0.5);
+}
+
+.table-light th,
+.table-light td {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0,0,0,.125);
+}
+
+.table-light tr:last-child td {
+  border-bottom: 0;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.125rem;
+  padding: .5rem 1rem;
+  margin: 0;
+  height: auto;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: none;
+  border-color: rgba(0,0,0,.125);
+  box-shadow: 0 0 0 3px rgba(0,0,0,.25);
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0074d9;
+  border-radius: 3px;
+}
+
+.btn-primary:hover {
+  box-shadow: inset 0 0 0 20rem rgba(0,0,0,.0625);
+}
+
+.btn-primary:active {
+  box-shadow: inset 0 0 0 20rem rgba(0,0,0,.125),
+    inset 0 3px 4px 0 rgba(0,0,0,.25),
+    0 0 1px rgba(0,0,0,.125);
+}
+
+.btn-primary:disabled,
+.btn-primary.is-disabled {
+  opacity: .5;
+}
+
+.btn-outline,
+.btn-outline:hover {
+  border-color: currentcolor;
+}
+
+.btn-outline {
+  border-radius: 3px;
+}
+
+.btn-outline:hover {
+  box-shadow: inset 0 0 0 20rem rgba(0,0,0,.0625);
+}
+
+.btn-outline:active {
+  box-shadow: inset 0 0 0 20rem rgba(0,0,0,.125),
+    inset 0 3px 4px 0 rgba(0,0,0,.25),
+    0 0 1px rgba(0,0,0,.125);
+}
+
+.btn-outline:disabled,
+.btn-outline.is-disabled {
+  opacity: .5;
+}
+
+.h1 { font-size: 2rem }
+.h2 { font-size: 1.5rem }
+.h3 { font-size: 1.25rem }
+.h4 { font-size: 1rem }
+.h5 { font-size: .875rem }
+.h6 { font-size: .75rem }
+
+.bold    { font-weight: bold }
+.regular { font-weight: normal }
+.italic  { font-style: italic }
+.caps    { text-transform: uppercase; letter-spacing: .2em; }
+
+.left-align   { text-align: left }
+.center       { text-align: center }
+.right-align  { text-align: right }
+.justify      { text-align: justify }
+
+.nowrap { white-space: nowrap }
+.break-word { word-wrap: break-word }
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+.inline       { display: inline }
+.block        { display: block }
+.inline-block { display: inline-block }
+.table        { display: table }
+.table-cell   { display: table-cell }
+
+.overflow-hidden { overflow: hidden }
+.overflow-scroll { overflow: scroll }
+.overflow-auto   { overflow: auto }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table
+}
+.clearfix:after { clear: both }
+
+.left  { float: left }
+.right { float: right }
+
+.fit { max-width: 100% }
+
+.border-box { box-sizing: border-box }
+
+.align-baseline { vertical-align: baseline }
+.align-top      { vertical-align: top }
+.align-middle   { vertical-align: middle }
+.align-bottom   { vertical-align: bottom }
+
+.m0  { margin:        0 }
+.mt0 { margin-top:    0 }
+.mr0 { margin-right:  0 }
+.mb0 { margin-bottom: 0 }
+.ml0 { margin-left:   0 }
+
+.m1  { margin: .5rem }
+.mt1 { margin-top: .5rem }
+.mr1 { margin-right: .5rem }
+.mb1 { margin-bottom: .5rem }
+.ml1 { margin-left: .5rem }
+
+.m2  { margin: 1rem }
+.mt2 { margin-top: 1rem }
+.mr2 { margin-right: 1rem }
+.mb2 { margin-bottom: 1rem }
+.ml2 { margin-left: 1rem }
+
+.m3  { margin: 2rem }
+.mt3 { margin-top: 2rem }
+.mr3 { margin-right: 2rem }
+.mb3 { margin-bottom: 2rem }
+.ml3 { margin-left: 2rem }
+
+.m4  { margin: 4rem }
+.mt4 { margin-top: 4rem }
+.mr4 { margin-right: 4rem }
+.mb4 { margin-bottom: 4rem }
+.ml4 { margin-left: 4rem }
+
+.mxn1 { margin-left: -.5rem; margin-right: -.5rem; }
+.mxn2 { margin-left: -1rem; margin-right: -1rem; }
+.mxn3 { margin-left: -2rem; margin-right: -2rem; }
+.mxn4 { margin-left: -4rem; margin-right: -4rem; }
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+.p0 { padding: 0 }
+
+.p1  { padding: .5rem }
+.py1 { padding-top: .5rem; padding-bottom: .5rem }
+.px1 { padding-left: .5rem; padding-right: .5rem }
+
+.p2  { padding: 1rem }
+.py2 { padding-top: 1rem; padding-bottom: 1rem }
+.px2 { padding-left: 1rem; padding-right: 1rem }
+
+.p3  { padding: 2rem }
+.py3 { padding-top: 2rem; padding-bottom: 2rem }
+.px3 { padding-left: 2rem; padding-right: 2rem }
+
+.p4  { padding: 4rem }
+.py4 { padding-top: 4rem; padding-bottom: 4rem }
+.px4 { padding-left: 4rem; padding-right: 4rem }
+
+.relative { position: relative }
+.absolute { position: absolute }
+.fixed    { position: fixed }
+
+.top-0    { top: 0 }
+.right-0  { right: 0 }
+.bottom-0 { bottom: 0 }
+.left-0   { left: 0 }
+
+.z1 { z-index: 1 }
+.z2 { z-index: 2 }
+.z3 { z-index: 3 }
+.z4 { z-index: 4 }
+
+.sm-show, .md-show, .lg-show {
+  display: none !important
+}
+
+@media (min-width: 40em) {
+  .sm-show { display: block !important }
+}
+
+@media (min-width: 52em) {
+  .md-show { display: block !important }
+}
+
+@media (min-width: 64em) {
+  .lg-show { display: block !important }
+}
+
+
+@media (min-width: 40em) {
+  .sm-hide { display: none !important }
+}
+
+@media (min-width: 52em) {
+  .md-hide { display: none !important }
+}
+
+@media (min-width: 64em) {
+  .lg-hide { display: none !important }
+}
+
+.display-none { display: none !important }
+
+.hide {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.container {
+  max-width: 64em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.col {
+  float: left;
+  box-sizing: border-box;
+}
+
+.col-right {
+  float: right;
+  box-sizing: border-box;
+}
+
+.col-1 {
+  width: 8.33333%;
+}
+
+.col-2 {
+  width: 16.66667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33333%;
+}
+
+.col-5 {
+  width: 41.66667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33333%;
+}
+
+.col-8 {
+  width: 66.66667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33333%;
+}
+
+.col-11 {
+  width: 91.66667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+@media (min-width: 40em) {
+
+  .sm-col {
+    float: left;
+    box-sizing: border-box;
+  }
+
+  .sm-col-right {
+    float: right;
+    box-sizing: border-box;
+  }
+
+  .sm-col-1 {
+    width: 8.33333%;
+  }
+
+  .sm-col-2 {
+    width: 16.66667%;
+  }
+
+  .sm-col-3 {
+    width: 25%;
+  }
+
+  .sm-col-4 {
+    width: 33.33333%;
+  }
+
+  .sm-col-5 {
+    width: 41.66667%;
+  }
+
+  .sm-col-6 {
+    width: 50%;
+  }
+
+  .sm-col-7 {
+    width: 58.33333%;
+  }
+
+  .sm-col-8 {
+    width: 66.66667%;
+  }
+
+  .sm-col-9 {
+    width: 75%;
+  }
+
+  .sm-col-10 {
+    width: 83.33333%;
+  }
+
+  .sm-col-11 {
+    width: 91.66667%;
+  }
+
+  .sm-col-12 {
+    width: 100%;
+  }
+
+}
+@media (min-width: 52em) {
+
+  .md-col {
+    float: left;
+    box-sizing: border-box;
+  }
+
+  .md-col-right {
+    float: right;
+    box-sizing: border-box;
+  }
+
+  .md-col-1 {
+    width: 8.33333%;
+  }
+
+  .md-col-2 {
+    width: 16.66667%;
+  }
+
+  .md-col-3 {
+    width: 25%;
+  }
+
+  .md-col-4 {
+    width: 33.33333%;
+  }
+
+  .md-col-5 {
+    width: 41.66667%;
+  }
+
+  .md-col-6 {
+    width: 50%;
+  }
+
+  .md-col-7 {
+    width: 58.33333%;
+  }
+
+  .md-col-8 {
+    width: 66.66667%;
+  }
+
+  .md-col-9 {
+    width: 75%;
+  }
+
+  .md-col-10 {
+    width: 83.33333%;
+  }
+
+  .md-col-11 {
+    width: 91.66667%;
+  }
+
+  .md-col-12 {
+    width: 100%;
+  }
+
+}
+@media (min-width: 64em) {
+
+  .lg-col {
+    float: left;
+    box-sizing: border-box;
+  }
+
+  .lg-col-right {
+    float: right;
+    box-sizing: border-box;
+  }
+
+  .lg-col-1 {
+    width: 8.33333%;
+  }
+
+  .lg-col-2 {
+    width: 16.66667%;
+  }
+
+  .lg-col-3 {
+    width: 25%;
+  }
+
+  .lg-col-4 {
+    width: 33.33333%;
+  }
+
+  .lg-col-5 {
+    width: 41.66667%;
+  }
+
+  .lg-col-6 {
+    width: 50%;
+  }
+
+  .lg-col-7 {
+    width: 58.33333%;
+  }
+
+  .lg-col-8 {
+    width: 66.66667%;
+  }
+
+  .lg-col-9 {
+    width: 75%;
+  }
+
+  .lg-col-10 {
+    width: 83.33333%;
+  }
+
+  .lg-col-11 {
+    width: 91.66667%;
+  }
+
+  .lg-col-12 {
+    width: 100%;
+  }
+
+}
+
+.flex { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex }
+
+.flex-column  { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column }
+.flex-wrap    { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap }
+
+.flex-center   { -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center }
+.flex-baseline { -webkit-box-align: baseline; -webkit-align-items: baseline; -ms-flex-align: baseline; align-items: baseline }
+.flex-stretch  { -webkit-box-align: stretch; -webkit-align-items: stretch; -ms-flex-align: stretch; align-items: stretch }
+.flex-start    { -webkit-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start }
+.flex-end      { -webkit-box-align: end; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end }
+
+.flex-justify  { -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between }
+
+.flex-auto {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+.flex-grow { -webkit-box-flex: 1; -webkit-flex: 1 0 auto; -ms-flex: 1 0 auto; flex: 1 0 auto }
+.flex-none { -webkit-box-flex: 0; -webkit-flex: none; -ms-flex: none; flex: none }
+
+.flex-first { -webkit-box-ordinal-group: 0; -webkit-order: -1; -ms-flex-order: -1; order: -1 }
+.flex-last  { -webkit-box-ordinal-group: 100000; -webkit-order: 99999; -ms-flex-order: 99999; order: 99999 }
+@media (min-width: 40em) {
+  .sm-flex { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex }
+}
+@media (min-width: 52em) {
+  .md-flex { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex }
+}
+@media (min-width: 64em) {
+  .lg-flex { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex }
+}
+
+.border {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0,0,0,.125);
+}
+
+.border-top {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(0,0,0,.125);
+}
+
+.border-right {
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: rgba(0,0,0,.125);
+}
+
+.border-bottom {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(0,0,0,.125);
+}
+
+.border-left {
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: rgba(0,0,0,.125);
+}
+
+.border-none { border: 0 }
+
+.rounded { border-radius: 3px }
+.circle  { border-radius: 50% }
+
+.rounded-top    { border-radius: 3px 3px 0 0 }
+.rounded-right  { border-radius: 0 3px 3px 0 }
+.rounded-bottom { border-radius: 0 0 3px 3px }
+.rounded-left   { border-radius: 3px 0 0 3px }
+
+.not-rounded { border-radius: 0 }
+
+.black  { color: #111 }
+.gray   { color: #aaa }
+.silver { color: #ddd }
+.white  { color: #fff }
+
+.aqua  { color: #7fdbff }
+.blue  { color: #0074d9 }
+.navy  { color: #001f3f }
+.teal  { color: #39cccc }
+.green { color: #2ecc40 }
+.olive { color: #3d9970 }
+.lime  { color: #01ff70 }
+
+.yellow  { color: #ffdc00 }
+.orange  { color: #ff851b }
+.red     { color: #ff4136 }
+.fuchsia { color: #f012be }
+.purple  { color: #b10dc9 }
+.maroon  { color: #85144b }
+
+.color-inherit { color: inherit }
+.muted { opacity: .5 }
+
+.bg-black  { background-color: #111 }
+.bg-gray   { background-color: #aaa }
+.bg-silver { background-color: #ddd }
+.bg-white  { background-color: #fff }
+
+.bg-aqua  { background-color: #7fdbff }
+.bg-blue  { background-color: #0074d9 }
+.bg-navy  { background-color: #001f3f }
+.bg-teal  { background-color: #39cccc }
+.bg-green { background-color: #2ecc40 }
+.bg-olive { background-color: #3d9970 }
+.bg-lime  { background-color: #01ff70 }
+
+.bg-yellow  { background-color: #ffdc00 }
+.bg-orange  { background-color: #ff851b }
+.bg-red     { background-color: #ff4136 }
+.bg-fuchsia { background-color: #f012be }
+.bg-purple  { background-color: #b10dc9 }
+.bg-maroon  { background-color: #85144b }
+
+.bg-darken-1 { background-color: rgba(0,0,0,.0625) }
+.bg-darken-2 { background-color: rgba(0,0,0,.125) }
+.bg-darken-3 { background-color: rgba(0,0,0,.25) }
+.bg-darken-4 { background-color: rgba(0,0,0,.5) }
+
+.bg-lighten-1 { background-color: rgba(255,255,255,.0625) }
+.bg-lighten-2 { background-color: rgba(255,255,255,.125) }
+.bg-lighten-3 { background-color: rgba(255,255,255,.25) }
+.bg-lighten-4 { background-color: rgba(255,255,255,.5) }
+
+
+
+</style>
+  <style>
+
+
+
+.documentation a {
+  color: #1184CE;
+}
+
+.documentation .suppress-p-margin p {
+  margin:0;
+}
+
+.force-inline, .force-inline p {
+  display: inline;
+  color: #222;
+}
+
+.container-small {
+  max-width: 58rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-height-100 {
+  max-height: 100%;
+}
+
+.fade {
+  opacity:0.50;
+}
+
+.button-indent {
+  padding: .25rem 1.5rem;
+  font-size: 90%;
+}
+
+.section-indent {
+  border-left: 2px solid #eee;
+}
+
+.bg-cloudy {
+  background: #fafafa;
+}
+
+.force-inline * {
+  display:inline;
+}
+
+section:target h3 {
+  font-weight:700;
+}
+
+.documentation,
+.documentation h1,
+.documentation h2,
+.documentation h3,
+.documentation h4,
+.documentation h5,
+.documentation h6 {
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+
+.documentation pre,
+.documentation code,
+.documentation samp {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 90%;
+}
+
+.documentation td,
+.documentation th {
+    padding: .25rem .25rem;
+}
+
+h1:hover .anchorjs-link,
+h2:hover .anchorjs-link,
+h3:hover .anchorjs-link,
+h4:hover .anchorjs-link {
+  opacity: 1;
+}
+
+.collapsible .collapser {
+  display:none;
+}
+
+.collapsible:target .collapser {
+  display: block;
+}
+
+.fix-3 {
+  width: 25%;
+  max-width: 244px;
+}
+
+@media (min-width: 52em) {
+  .fix-margin-3 {
+    margin-left: 25%;
+  }
+}
+
+</style>
+  <style>
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #998;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #1184CE;
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #ed225d;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.hljs-dartdoc,
+.tex .hljs-formula {
+  color: #ed225d;
+}
+
+.hljs-title,
+.hljs-id,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold;
+}
+
+.hljs-list .hljs-keyword,
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-class .hljs-title,
+.hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal;
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #008080;
+}
+
+.hljs-regexp {
+  color: #009926;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.clojure .hljs-keyword,
+.scheme .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073;
+}
+
+.hljs-built_in {
+  color: #0086b3;
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.diff .hljs-change {
+  background: #0086b3;
+}
+
+.hljs-chunk {
+  color: #aaa;
+}
+
+</style>
+</head>
+<body class="documentation">
+  <div class="container">
+    <div class="clearfix md-mxn2">
+      <div class="fixed md-show fix-3 overflow-auto max-height-100">
+        <div class="py1 px2">
+          <h3 class="mb0 no-anchor"></h3>
+          <div class="mb1"><code></code></div>
+          <input placeholder="Filter" id="filter-input" class="col12 block field" type="text">
+          <div id="toc">
+              <a href="#BitlySDK" class="block bold">
+                BitlySDK
+              </a>
+                <a href="#BitlySDK.clicks" class="regular block">
+                  #clicks
+                </a>
+                <a href="#BitlySDK.expand" class="regular block">
+                  #expand
+                </a>
+                <a href="#BitlySDK.info" class="regular block">
+                  #info
+                </a>
+                <a href="#BitlySDK.shorten" class="regular block">
+                  #shorten
+                </a>
+          </div>
+        </div>
+      </div>
+      <div class="fix-margin-3">
+        <div class="px2">
+<div class="py1"><section class="py2 clearfix">
+  <h2 id="BitlySDK" class="mt0">
+    BitlySDK<span class="gray">(options)</span>
+  </h2>
+  
+  
+  
+  
+  
+  <p>The Bitly Interview SDK offers a few methods that would help you in creating and querying a Bitlink (Bitly-branded short URL)</p>
+
+    <h4>Parameters</h4>
+    <ul class="suppress-p-margin">
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+ <strong>options</strong>
+          :
+          <div class="force-inline">
+            
+          </div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+ options.login
+                  <p>Username of the Bitly account</p>
+</li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+ options.apiKey
+                  <p>API Key of the Bitly account</p>
+</li>
+            </ul>
+        </li>
+    </ul>
+    <h4>Examples</h4>
+<pre class="overflow-auto"><span class="hljs-comment">// Usage:</span>
+<span class="hljs-keyword">const</span> bitlySDK = <span class="hljs-keyword">new</span> BitlySDK({
+  login: <span class="hljs-string">'hunter2'</span>,
+  apiKey: <span class="hljs-string">'R_d41d8cd98f00b204e9800998ecf8427e'</span>
+});</pre>
+      <h4>Instance members</h4>
+        <div class="collapsible" id="BitlySDK.clicks">
+          <a href="#BitlySDK.clicks">
+            <code>
+              #clicks<span class="gray">(shortUrl)</span>
+            </code>
+            <div class="force-inline">
+              <p>Given a list of Bitlinks, returns a JSON containing the click count those pages.</p>
+
+            </div>
+          </a>
+          <div class="collapser border px2">
+<section class="py2 clearfix">
+  <h2 id="BitlySDK.clicks" class="mt0">
+    clicks<span class="gray">(shortUrl)</span>
+  </h2>
+  
+  
+  
+  
+  
+  <p>Given a list of Bitlinks, returns a JSON containing the click count those pages.</p>
+
+    <h4>Parameters</h4>
+    <ul class="suppress-p-margin">
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>
+.&lt;
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+&gt;
+ <strong>shortUrl</strong>
+          :
+          <div class="force-inline">
+            <p>The short URL to be queried</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>
+</code>
+      :
+      <div class="force-inline">
+        <p>Promise containing the JSON: <code>Array&lt;{ short_url: string; global_hash: number; }&gt;</code></p>
+
+      </div>
+    <h4>Throws</h4>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError">TypeError</a>
+: <div class="force-inline"><p>Error produced by the browser (e.g. Timeout, XSS error)</p>
+</div></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>
+: <div class="force-inline"><p>HTTP/API Errors (e.g. "500 INVALID_APIKEY", "500 MISSING_ARG")</p>
+</div></li>
+    </ul>
+    <h4>Examples</h4>
+<pre class="overflow-auto"><span class="hljs-comment">// Usage:</span>
+bitlySDK.clicks([<span class="hljs-string">'http://bit.ly/ze6poY'</span>, <span class="hljs-string">'http://bit.ly/a'</span>]).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(result);
+});
+
+<span class="hljs-comment">// Response JSON:</span>
+[{
+  short_url: <span class="hljs-string">"http://bit.ly/ze6poY"</span>,
+  global_clicks: <span class="hljs-number">442</span>,
+  ...
+}, {
+  short_url: <span class="hljs-string">"http://bit.ly/a"</span>,
+  global_clicks: <span class="hljs-number">431242</span>,
+  ...
+}]</pre>
+</section>
+          </div>
+        </div>
+        <div class="collapsible" id="BitlySDK.expand">
+          <a href="#BitlySDK.expand">
+            <code>
+              #expand<span class="gray">(shortUrl)</span>
+            </code>
+            <div class="force-inline">
+              <p>Given a Bitlink, returns a JSON containing the original long URL.</p>
+
+            </div>
+          </a>
+          <div class="collapser border px2">
+<section class="py2 clearfix">
+  <h2 id="BitlySDK.expand" class="mt0">
+    expand<span class="gray">(shortUrl)</span>
+  </h2>
+  
+  
+  
+  
+  
+  <p>Given a Bitlink, returns a JSON containing the original long URL.</p>
+
+    <h4>Parameters</h4>
+    <ul class="suppress-p-margin">
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+ <strong>shortUrl</strong>
+          :
+          <div class="force-inline">
+            <p>The short URL to be expanded</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>
+</code>
+      :
+      <div class="force-inline">
+        <p>Promise containing the JSON: <code>{ long_url: string; short_url: string; }</code></p>
+
+      </div>
+    <h4>Throws</h4>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError">TypeError</a>
+: <div class="force-inline"><p>Error produced by the browser (e.g. Timeout, XSS error)</p>
+</div></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>
+: <div class="force-inline"><p>HTTP/API Errors (e.g. "500 INVALID_APIKEY", "500 MISSING_ARG")</p>
+</div></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>
+: <div class="force-inline"><p>NOT_FOUND - Bitlink was not found</p>
+</div></li>
+    </ul>
+    <h4>Examples</h4>
+<pre class="overflow-auto"><span class="hljs-comment">// Usage:</span>
+bitlySDK.expand(<span class="hljs-string">'http://bit.ly/ze6poY'</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(result);
+});
+
+<span class="hljs-comment">// Response JSON:</span>
+{
+  short_url: <span class="hljs-string">"http://bit.ly/ze6poY"</span>,
+  long_url: <span class="hljs-string">"http://google.com/"</span>,
+  ...
+}</pre>
+</section>
+          </div>
+        </div>
+        <div class="collapsible" id="BitlySDK.info">
+          <a href="#BitlySDK.info">
+            <code>
+              #info<span class="gray">(shortUrl)</span>
+            </code>
+            <div class="force-inline">
+              <p>Given a Bitlink, returns a JSON containing the title of the destination page.</p>
+
+            </div>
+          </a>
+          <div class="collapser border px2">
+<section class="py2 clearfix">
+  <h2 id="BitlySDK.info" class="mt0">
+    info<span class="gray">(shortUrl)</span>
+  </h2>
+  
+  
+  
+  
+  
+  <p>Given a Bitlink, returns a JSON containing the title of the destination page.</p>
+
+    <h4>Parameters</h4>
+    <ul class="suppress-p-margin">
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+ <strong>shortUrl</strong>
+          :
+          <div class="force-inline">
+            <p>The short URL to be expanded</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>
+</code>
+      :
+      <div class="force-inline">
+        <p>Promise containing the JSON: <code>{ short_url: string; title: string; }</code></p>
+
+      </div>
+    <h4>Throws</h4>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError">TypeError</a>
+: <div class="force-inline"><p>Error produced by the browser (e.g. Timeout, XSS error)</p>
+</div></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>
+: <div class="force-inline"><p>HTTP/API Errors (e.g. "500 INVALID_APIKEY", "500 MISSING_ARG")</p>
+</div></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>
+: <div class="force-inline"><p>NOT_FOUND - Bitlink was not found</p>
+</div></li>
+    </ul>
+    <h4>Examples</h4>
+<pre class="overflow-auto"><span class="hljs-comment">// Usage:</span>
+bitlySDK.info(<span class="hljs-string">'http://bit.ly/ze6poY'</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(result);
+});
+
+<span class="hljs-comment">// Response JSON:</span>
+{
+  short_url: <span class="hljs-string">"http://bit.ly/ze6poY"</span>,
+  title: <span class="hljs-string">"Google"</span>,
+  ...
+}</pre>
+</section>
+          </div>
+        </div>
+        <div class="collapsible" id="BitlySDK.shorten">
+          <a href="#BitlySDK.shorten">
+            <code>
+              #shorten<span class="gray">(longUrl)</span>
+            </code>
+            <div class="force-inline">
+              <p>Given a long URL, creates a Bitlink, returns a JSON containing the Bitlink short URL.</p>
+
+            </div>
+          </a>
+          <div class="collapser border px2">
+<section class="py2 clearfix">
+  <h2 id="BitlySDK.shorten" class="mt0">
+    shorten<span class="gray">(longUrl)</span>
+  </h2>
+  
+  
+  
+  
+  
+  <p>Given a long URL, creates a Bitlink, returns a JSON containing the Bitlink short URL.</p>
+
+    <h4>Parameters</h4>
+    <ul class="suppress-p-margin">
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>
+ <strong>longUrl</strong>
+          :
+          <div class="force-inline">
+            <p>The long URL to be shortened</p>
+
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>
+</code>
+      :
+      <div class="force-inline">
+        <p>Promise containing the JSON:<code>{ long_url: string; url: string; }</code></p>
+
+      </div>
+    <h4>Throws</h4>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError">TypeError</a>
+: <div class="force-inline"><p>Error produced by the browser (e.g. Timeout, XSS error)</p>
+</div></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>
+: <div class="force-inline"><p>HTTP/API Errors (e.g. "500 INVALID_APIKEY", "500 MISSING_ARG")</p>
+</div></li>
+    </ul>
+    <h4>Examples</h4>
+<pre class="overflow-auto"><span class="hljs-comment">// Usage:</span>
+bitlySDK.shorten(<span class="hljs-string">'http://google.com/'</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(result);
+});
+
+<span class="hljs-comment">// Response JSON:</span>
+{
+  long_url: <span class="hljs-string">"http://google.com/"</span>,
+  url: <span class="hljs-string">"http://bit.ly/ze6poY"</span>,
+  ...
+}</pre>
+</section>
+          </div>
+        </div>
+</section>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>/*!
+ * AnchorJS - v1.2.1 - 2015-07-02
+ * https://github.com/bryanbraun/anchorjs
+ * Copyright (c) 2015 Bryan Braun; Licensed MIT
+ */
+
+function AnchorJS(options) {
+  'use strict';
+
+  this.options = options || {};
+
+  this._applyRemainingDefaultOptions = function(opts) {
+    this.options.icon = this.options.hasOwnProperty('icon') ? opts.icon : '\ue9cb'; // Accepts characters (and also URLs?), like  '#', '¶', '❡', or '§'.
+    this.options.visible = this.options.hasOwnProperty('visible') ? opts.visible : 'hover'; // Also accepts 'always'
+    this.options.placement = this.options.hasOwnProperty('placement') ? opts.placement : 'right'; // Also accepts 'left'
+    this.options.class = this.options.hasOwnProperty('class') ? opts.class : ''; // Accepts any class name.
+  };
+
+  this._applyRemainingDefaultOptions(options);
+
+  this.add = function(selector) {
+    var elements,
+        elsWithIds,
+        idList,
+        elementID,
+        i,
+        roughText,
+        tidyText,
+        index,
+        count,
+        newTidyText,
+        readableID,
+        anchor;
+
+    this._applyRemainingDefaultOptions(this.options);
+
+    // Provide a sensible default selector, if none is given.
+    if (!selector) {
+      selector = 'h1, h2, h3, h4, h5, h6';
+    } else if (typeof selector !== 'string') {
+      throw new Error('The selector provided to AnchorJS was invalid.');
+    }
+
+    elements = document.querySelectorAll(selector);
+    if (elements.length === 0) {
+      return false;
+    }
+
+    this._addBaselineStyles();
+
+    // We produce a list of existing IDs so we don't generate a duplicate.
+    elsWithIds = document.querySelectorAll('[id]');
+    idList = [].map.call(elsWithIds, function assign(el) {
+      return el.id;
+    });
+
+    for (i = 0; i < elements.length; i++) {
+
+      if (elements[i].hasAttribute('id')) {
+        elementID = elements[i].getAttribute('id');
+      } else {
+        roughText = elements[i].textContent;
+
+        // Refine it so it makes a good ID. Strip out non-safe characters, replace
+        // spaces with hyphens, truncate to 32 characters, and make toLowerCase.
+        //
+        // Example string:                                // '⚡⚡⚡ Unicode icons are cool--but they definitely don't belong in a URL fragment.'
+        tidyText = roughText.replace(/[^\w\s-]/gi, '')    // ' Unicode icons are cool--but they definitely dont belong in a URL fragment'
+                                .replace(/\s+/g, '-')     // '-Unicode-icons-are-cool--but-they-definitely-dont-belong-in-a-URL-fragment'
+                                .replace(/-{2,}/g, '-')   // '-Unicode-icons-are-cool-but-they-definitely-dont-belong-in-a-URL-fragment'
+                                .substring(0, 64)         // '-Unicode-icons-are-cool-but-they-definitely-dont-belong-in-a-URL'
+                                .replace(/^-+|-+$/gm, '') // 'Unicode-icons-are-cool-but-they-definitely-dont-belong-in-a-URL'
+                                .toLowerCase();           // 'unicode-icons-are-cool-but-they-definitely-dont-belong-in-a-url'
+
+        // Compare our generated ID to existing IDs (and increment it if needed)
+        // before we add it to the page.
+        newTidyText = tidyText;
+        count = 0;
+        do {
+          if (index !== undefined) {
+            newTidyText = tidyText + '-' + count;
+          }
+          // .indexOf is supported in IE9+.
+          index = idList.indexOf(newTidyText);
+          count += 1;
+        } while (index !== -1);
+        index = undefined;
+        idList.push(newTidyText);
+
+        // Assign it to our element.
+        // Currently the setAttribute element is only supported in IE9 and above.
+        elements[i].setAttribute('id', newTidyText);
+
+        elementID = newTidyText;
+      }
+
+      readableID = elementID.replace(/-/g, ' ');
+
+      // The following code builds the following DOM structure in a more effiecient (albeit opaque) way.
+      // '<a class="anchorjs-link ' + this.options.class + '" href="#' + elementID + '" aria-label="Anchor link for: ' + readableID + '" data-anchorjs-icon="' + this.options.icon + '"></a>';
+      anchor = document.createElement('a');
+      anchor.className = 'anchorjs-link ' + this.options.class;
+      anchor.href = '#' + elementID;
+      anchor.setAttribute('aria-label', 'Anchor link for: ' + readableID);
+      anchor.setAttribute('data-anchorjs-icon', this.options.icon);
+
+      if (this.options.visible === 'always') {
+        anchor.style.opacity = '1';
+      }
+
+      if (this.options.icon === '\ue9cb') {
+        anchor.style.fontFamily = 'anchorjs-icons';
+        anchor.style.fontStyle = 'normal';
+        anchor.style.fontVariant = 'normal';
+        anchor.style.fontWeight = 'normal';
+        anchor.style.lineHeight = 1;
+      }
+
+      if (this.options.placement === 'left') {
+        anchor.style.position = 'absolute';
+        anchor.style.marginLeft = '-1em';
+        anchor.style.paddingRight = '0.5em';
+        elements[i].insertBefore(anchor, elements[i].firstChild);
+      } else { // if the option provided is `right` (or anything else).
+        anchor.style.paddingLeft = '0.375em';
+        elements[i].appendChild(anchor);
+      }
+    }
+
+    return this;
+  };
+
+  this.remove = function(selector) {
+    var domAnchor,
+        elements = document.querySelectorAll(selector);
+    for (var i = 0; i < elements.length; i++) {
+      domAnchor = elements[i].querySelector('.anchorjs-link');
+      if (domAnchor) {
+        elements[i].removeChild(domAnchor);
+      }
+    }
+    return this;
+  };
+
+  this._addBaselineStyles = function() {
+    // We don't want to add global baseline styles if they've been added before.
+    if (document.head.querySelector('style.anchorjs') !== null) {
+      return;
+    }
+
+    var style = document.createElement('style'),
+        linkRule =
+        ' .anchorjs-link {'                       +
+        '   opacity: 0;'                          +
+        '   text-decoration: none;'               +
+        '   -webkit-font-smoothing: antialiased;' +
+        '   -moz-osx-font-smoothing: grayscale;'  +
+        ' }',
+        hoverRule =
+        ' *:hover > .anchorjs-link,'              +
+        ' .anchorjs-link:focus  {'                +
+        '   opacity: 1;'                          +
+        ' }',
+        anchorjsLinkFontFace =
+        ' @font-face {'                           +
+        '   font-family: "anchorjs-icons";'       +
+        '   font-style: normal;'                  +
+        '   font-weight: normal;'                 + // Icon from icomoon; 10px wide & 10px tall; 2 empty below & 4 above
+        '   src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SBTUAAAC8AAAAYGNtYXAWi9QdAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5Zgq29TcAAAF4AAABNGhlYWQEZM3pAAACrAAAADZoaGVhBhUDxgAAAuQAAAAkaG10eASAADEAAAMIAAAAFGxvY2EAKACuAAADHAAAAAxtYXhwAAgAVwAAAygAAAAgbmFtZQ5yJ3cAAANIAAAB2nBvc3QAAwAAAAAFJAAAACAAAwJAAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADpywPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg6cv//f//AAAAAAAg6cv//f//AAH/4xY5AAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAACADEARAJTAsAAKwBUAAABIiYnJjQ/AT4BMzIWFxYUDwEGIicmND8BNjQnLgEjIgYPAQYUFxYUBw4BIwciJicmND8BNjIXFhQPAQYUFx4BMzI2PwE2NCcmNDc2MhcWFA8BDgEjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAEAAAABAACiToc1Xw889QALBAAAAAAA0XnFFgAAAADRecUWAAAAAAJTAsAAAAAIAAIAAAAAAAAAAQAAA8D/wAAABAAAAAAAAlMAAQAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAACAAAAAoAAMQAAAAAACgAUAB4AmgABAAAABQBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAADgCuAAEAAAAAAAEADgAAAAEAAAAAAAIABwCfAAEAAAAAAAMADgBLAAEAAAAAAAQADgC0AAEAAAAAAAUACwAqAAEAAAAAAAYADgB1AAEAAAAAAAoAGgDeAAMAAQQJAAEAHAAOAAMAAQQJAAIADgCmAAMAAQQJAAMAHABZAAMAAQQJAAQAHADCAAMAAQQJAAUAFgA1AAMAAQQJAAYAHACDAAMAAQQJAAoANAD4YW5jaG9yanMtaWNvbnMAYQBuAGMAaABvAHIAagBzAC0AaQBjAG8AbgBzVmVyc2lvbiAxLjAAVgBlAHIAcwBpAG8AbgAgADEALgAwYW5jaG9yanMtaWNvbnMAYQBuAGMAaABvAHIAagBzAC0AaQBjAG8AbgBzYW5jaG9yanMtaWNvbnMAYQBuAGMAaABvAHIAagBzAC0AaQBjAG8AbgBzUmVndWxhcgBSAGUAZwB1AGwAYQByYW5jaG9yanMtaWNvbnMAYQBuAGMAaABvAHIAagBzAC0AaQBjAG8AbgBzRm9udCBnZW5lcmF0ZWQgYnkgSWNvTW9vbi4ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==) format("truetype");' +
+        ' }',
+        pseudoElContent =
+        ' [data-anchorjs-icon]::after {'          +
+        '   content: attr(data-anchorjs-icon);'   +
+        ' }',
+        firstStyleEl;
+
+    style.className = 'anchorjs';
+    style.appendChild(document.createTextNode('')); // Necessary for Webkit.
+
+    // We place it in the head with the other style tags, if possible, so as to
+    // not look out of place. We insert before the others so these styles can be
+    // overridden if necessary.
+    firstStyleEl = document.head.querySelector('[rel="stylesheet"], style');
+    if (firstStyleEl === undefined) {
+      document.head.appendChild(style);
+    } else {
+      document.head.insertBefore(style, firstStyleEl);
+    }
+
+    style.sheet.insertRule(linkRule, style.sheet.cssRules.length);
+    style.sheet.insertRule(hoverRule, style.sheet.cssRules.length);
+    style.sheet.insertRule(pseudoElContent, style.sheet.cssRules.length);
+    style.sheet.insertRule(anchorjsLinkFontFace, style.sheet.cssRules.length);
+  };
+}
+
+var anchors = new AnchorJS();
+</script>
+  <script>/* global anchors */
+
+// add anchor links to headers
+anchors.options.placement = 'left';
+anchors.add().remove('.no-anchor');
+
+// Filter UI
+var tocElements = document.getElementById('toc').getElementsByTagName('a');
+document.getElementById('filter-input').addEventListener('keyup', function(e) {
+
+  var i, element;
+
+  // enter key
+  if (e.keyCode === 13) {
+    // go to the first displayed item in the toc
+    for (i = 0; i < tocElements.length; i++) {
+      element = tocElements[i];
+      if (!element.classList.contains('hide')) {
+        location.replace(element.href);
+        return e.preventDefault();
+      }
+    }
+  }
+
+  var match = function() { return true; },
+    value = this.value.toLowerCase();
+
+  if (!value.match(/^\s*$/)) {
+    match = function(text) { return text.toLowerCase().indexOf(value) !== -1; };
+  }
+
+  for (i = 0; i < tocElements.length; i++) {
+    element = tocElements[i];
+    if (match(element.innerHTML)) {
+      element.classList.remove('hide');
+    } else {
+      element.classList.add('hide');
+    }
+  }
+});
+</script>
+
+
+</body></html>
